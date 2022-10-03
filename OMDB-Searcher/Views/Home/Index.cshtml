@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model OMDB_Searcher.Models.User
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+@Html.ActionLink("cosss", "test", "Test") 
+
+<form>
+    @Html.TextBoxFor(m => m.Name);
+     @Html.TextBoxFor(m => m.Id);
+    <input type="submit" asp-controller="Test" asp-action="test" />
+</form>
