@@ -7,8 +7,4 @@
     <RootNamespace>OMDB_Searcher</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="Views\Test\test.cshtml" />
-  </ItemGroup>
-
 </Project>

@@ -1,15 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model OMDB_Searcher.Models.User
+@model OMDB_Searcher.Models.ViewModels.UserViewModel;
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 </div>
 
-@Html.ActionLink("cosss", "test", "Test") 
+<div class="log-in">
 
-<form>
-    @Html.TextBoxFor(m => m.Name);
-     @Html.TextBoxFor(m => m.Id);
-    <input type="submit" asp-controller="Test" asp-action="test" />
-</form>
+    @Html.TextBoxFor(m => m.User.Name)
+    @Html.TextBoxFor(m => m.User.Password)
+
+    @using (Html.BeginForm())
+    {
+        <input type="button" class="button1" value="Zaloguj" onclick="location.href='@Url.Action("Login", "Home")'"/>
+    }
+</div>
+
